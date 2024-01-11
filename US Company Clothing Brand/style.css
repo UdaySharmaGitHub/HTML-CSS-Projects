@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 18px;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #2C2825 ;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background: #000 url(./images/bbc-drop2.webp) no-repeat top;
+    background-size: cover;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 12vh;
+    background: rgba(255, 255, 255, 0.064);
+backdrop-filter: blur(2px );
+-webkit-backdrop-filter: blur( 2px );
+}
+.nav-links{
+    display: flex;justify-content: center;align-items: center;
+    gap: 30px;
+    list-style: none;
+  margin-inline:50px 50px ;
+}
+.nav-links li{
+    font-weight: 500;
+    text-transform: uppercase;
+    > a{
+        text-decoration: none;
+        color: #fff;
+        transition: all ease 0.23s;
+    }
+}
+.navbar > img{
+    margin-top: 10px;
+    height: 180px;
+    position: relative;
+    left: 8%;
+}
+.home-icon > a i{
+   font-size:35px ;
+   padding-right: 20px;
+}
+.nav-links > li a:hover , li > a.active{
+    color: rgb(139, 255, 255);
+}
+.section-1{
+    height:calc(100vh - 12vh);
+width: 100%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-main{
+    display: flex;
+    padding-inline: 100px 0px ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    width: 90%;
+}
+.play-container{
+    height: 130px;
+    width: 130px;
+    outline:2px solid #fff ;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    transition: 0.5s all ease;
+    > i{
+    color: #fff;
+    font-size: 150px;
+    font-weight: 300;
+    }
+}
+.play-container:hover{
+    outline-offset: 10px;
+}
+.company-name{
+    color: #fff;
+    font-size: 60px;
+}
+.new_letter{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.newletter{
+   width: 40%;
+   height: 40%;
+   background-color: #000;
+   position: relative;
+   transition: 0.5s all ease;
+   border-radius: 20px;
+   overflow: hidden;
+
+}
+.newletter > span{
+    top: 20%;
+    left: -5%;
+    height: 60%;
+    width: 180px;
+    position: absolute;
+    color: #fff;
+    transform: rotate(-90deg);
+    font-size: 30px;
+    font-weight: 600;
+    transition: 0.5s all ease;
+
+}
+.newletter:hover{
+    background-color: #fff;
+}
+.newletter:hover > span{
+    color: #000;
+}
+
+/*  section-2 */
+.section-2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+align-items: flex-end;
+gap: 20px;
+}
+.men-img , .desc-men-img{
+    width: 50%;
+    height:97%;
+    background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.men-img:nth-child(1){
+    background-image: url(./images/25\ Best\ Male\ Poses_\ Guide\ to\ Photographing\ Men.jpg);
+    background-position:bottom;
+}
+.men-img:nth-child(2){
+    background-image: url(./images//Out\ of\ The\ North\ Face\ archives__.jpg);
+}
+.men-img-desc{
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    > h1{
+        font-size: 60px ;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: #fff;
+        text-shadow: 2px 2px 2px #000 ,-2px -2px 2px #000;
+    }
+}
+.men-img-btn{
+    font-size: 30px;
+    border-radius: 10px;
+    font-weight:600 ;
+    position: relative;
+    background-color: #000;
+padding: 5px 20px ;
+outline: none;
+text-align: center;
+cursor: pointer;
+border: none;
+color : #fff;
+border-bottom: 2px solid #fff;
+overflow: hidden;
+}
+.men-img-btn::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s all ease;
+    z-index: -1;
+    transform: scaleY(0);
+    transform-origin:bottom;
+
+}
+.men-img-btn{
+    z-index: 5;
+}
+.men-img-btn:hover:before,.men-img-btn:focus:before{
+  transform: scaleY(1);
+}
+.men-img-btn > span{
+    z-index: 5;
+    color: #fff;    
+    transition: 0.5s all ease;
+}
+.men-img-btn:is(:hover,:focus) span{
+    color: rgb(0, 0, 0);
+}
+/* section-3 */
+.men-img-1:nth-child(1){
+    background-image: url(./images/MMSCENE\ PORTRAITS_\ Gavin\ Grabowski\ by\ Jon\ Wong.jpg);
+    background-position: top;
+}
+.men-img-1:nth-child(2){
+    background-image: url(./images/The\ North\ Face\ Urban\ Exploration\ Launches\ SS22\ _Urban\ Traverse_\ Capsule.jpg);
+}
